@@ -1,15 +1,15 @@
-<section class="container criar-pensamentos ff-inter">
+<section class="container editar-pensamentos ff-inter">
   <header class="header">
-    <h2>Adicione um <br />pensameneto novo:</h2>
+    <h2>Adicione um <br />pensamento novo:</h2>
   </header>
-  <form action="">
+  <form>
     <label for="pensamento">Pensamento</label>
     <input
       type="textarea"
       class="input"
       id="pensamento"
       name="pensamento"
-      placeholder="Adicione um pensamento..."
+      placeholder="Digite o pensamento"
       [(ngModel)]="pensamento.conteudo"
     />
     <label for="autoria">Autoria ou fonte</label>
@@ -18,7 +18,7 @@
       class="input"
       id="autoria"
       name="autoria"
-      placeholder="Adicione a autoria..."
+      placeholder="Digite a autoria ou fonte"
       [(ngModel)]="pensamento.autoria"
     />
     <label for="modelo">Selecione o modelo do card:</label>
@@ -102,7 +102,7 @@
       </div>
     </div>
     <div class="acoes">
-      <button (click)="criarPensamento()" class="botao">Salvar</button>
+      <button (click)="editarPensamento()" class="botao">Salvar</button>
       <button (click)="cancelar()" class="botao">Cancelar</button>
     </div>
   </form>
