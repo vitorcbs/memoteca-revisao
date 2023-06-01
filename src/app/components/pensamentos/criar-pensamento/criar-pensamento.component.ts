@@ -49,7 +49,8 @@ export class CriarPensamentoComponent implements OnInit {
           validacaoLetrasMinusculas()
         ]),
       ],
-      modelo: ['', Validators.compose([Validators.required])]
+      modelo: ['', Validators.compose([Validators.required])],
+      favorito: [false]
     });
   }
 }

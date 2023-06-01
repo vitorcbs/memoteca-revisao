@@ -4,6 +4,7 @@
       "conteudo": "Teste 23333333",
       "autoria": "teste23232",
       "modelo": "modelo2",
+      "favorito": true,
       "id": 1
     },
     {
@@ -12,37 +13,50 @@
       ],
       "autoria": "teste",
       "modelo": "modelo1",
+      "favorito": true,
       "id": 2
     },
     {
       "conteudo": "teste",
       "autoria": "teste",
       "modelo": "modelo3",
+      "favorito": false,
       "id": 3
     },
     {
       "conteudo": "TEsteteste",
       "autoria": "testeeeee",
       "modelo": "modelo1",
+      "favorito": false,
       "id": 4
     },
     {
       "conteudo": "teste5",
       "autoria": "teste",
       "modelo": "modelo3",
+      "favorito": false,
       "id": 5
     },
     {
       "conteudo": "teste6",
       "autoria": "teste",
       "modelo": "modelo1",
+      "favorito": false,
       "id": 6
     },
     {
       "conteudo": "teste7",
       "autoria": "teste",
       "modelo": "modelo3",
+      "favorito": false,
       "id": 7
+    },
+    {
+      "conteudo": "yoda",
+      "autoria": "yoda",
+      "modelo": "modelo3",
+      "favorito": false,
+      "id": 8
     }
   ]
 }

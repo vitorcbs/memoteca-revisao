@@ -18,6 +18,7 @@ export class EditarPensamentoComponent {
     conteudo: '',
     autoria: '',
     modelo: '',
+    favorito: false
   };
 
   constructor(
@@ -53,6 +54,7 @@ export class EditarPensamentoComponent {
           `${this.pensamento.modelo}`,
           Validators.compose([Validators.required]),
         ],
+        favorito: [],
       });
     });
   }

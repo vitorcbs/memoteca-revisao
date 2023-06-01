@@ -1,13 +1,30 @@
 <section class="container">
   <header class="header d-flex">
-    <h2 class="ff-inter">Meu mural</h2>
-    <button routerLink="/criarPensamentos" class="botao">
-      Adicionar pensamento
-    </button>
+    <div class="buscar-pensamentos">
+      <input
+      type="search"
+      class="filtro"
+      placeholder="O que voce procura?"
+      autofocus
+      [(ngModel)]="filtro"
+      (keyup)="pesquisarPensamentos()"
+      >
+      <img src="/assets/imagens/lupa.png" alt="Lupa azul">
+    </div>
+    <h2 class="ff-inter">{{ titulo }}</h2>
+    <div class="botoes">
+      <button class="botao" (click)="recarregarPagina()">Meu mural</button>
+      <button class="botao" (click)="listarFavoritos()">Meus favoritos</button>
+      <button routerLink="/criarPensamentos" class="botao">
+        Novo pensamento
+      </button>
+    </div>
   </header>
   <div class="mural" *ngIf="listaPensamentos.length > 0; else semPensamentos">
     <div *ngFor="let pensamento of listaPensamentos">
-      <app-pensamento [pensamento]="pensamento"></app-pensamento>
+      <app-pensamento
+       [pensamento]="pensamento"
+       [listaFavoritos]="listaFavoritos"></app-pensamento>
       <!-- pensamento vai receber a variavel pensamento do ngfor -->
     </div>
   </div>
