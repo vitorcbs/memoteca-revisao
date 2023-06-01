@@ -39,6 +39,12 @@
     >
       Autoria precisa ter no minimo 3 caracteres!
     </div>
+    <div
+      class="mensagem__erro"
+      *ngIf="formulario.get('autoria')?.errors?.['lowercaseOnly'] && formulario.get('autoria')?.touched"
+    >
+      Autoria aceita apenas letras minusculas!
+    </div>
     <label for="modelo">Selecione o modelo do card:</label>
     <div class="container-radio">
       <div class="radio-modelo">

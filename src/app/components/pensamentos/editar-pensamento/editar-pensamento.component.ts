@@ -31,7 +31,6 @@ export class EditarPensamentoComponent {
     const id = this.route.snapshot.paramMap.get('id');
     this.service.buscarPorId(parseInt(id!)).subscribe((pensamento) => {
       this.pensamento = pensamento; //o pensamento instanciado no começo da classe recebe o valor achado pelo id
-      console.log(pensamento);
 
       this.formulario = this.FormBuilder.group({
         conteudo: [
@@ -59,13 +58,12 @@ export class EditarPensamentoComponent {
   }
 
   editarPensamento() {
-    this.pensamento = {...this.formulario.value, id: this.pensamento.id} //quebra os itens do formulario e adiciona o id que não vem com o form
-    console.log(this.pensamento)
-    this.service.editarPensamento(this.pensamento).subscribe(() => {
-      console.log(this.formulario.value)
-      console.log(this.pensamento)
-      this.router.navigate(['/listarPensamentos']);
-    });
+    if (this.formulario.valid) {
+      this.pensamento = { ...this.formulario.value, id: this.pensamento.id }; //quebra os itens do formulario e adiciona o id que não vem com o form
+      this.service.editarPensamento(this.pensamento).subscribe(() => {
+        this.router.navigate(['/listarPensamentos']);
+      });
+    }
   }
 
   cancelar() {
