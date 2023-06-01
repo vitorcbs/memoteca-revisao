@@ -2,8 +2,6 @@ import { Router } from '@angular/router';
 import { Component } from '@angular/core';
 import { Pensamento } from '../pensamento';
 import { PensamentoService } from '../pensamento.service';
-import { RouteReuseStrategy } from '@angular/router';
-import { CustomReuseStrategy } from '../../../custom-reuse-strategy';
 
 @Component({
   selector: 'app-listar-pensamentos',
